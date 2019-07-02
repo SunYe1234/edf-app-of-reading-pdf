@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jul 02 15:35:26 CEST 2019
+#Tue Jul 02 19:05:52 CEST 2019
 210.set=ANDROID_RESOURCE
 14.set=NATIVE_RESOURCE
 180.file=/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_screen_simple.xml

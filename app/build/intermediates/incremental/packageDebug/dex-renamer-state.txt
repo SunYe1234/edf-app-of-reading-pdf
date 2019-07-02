@@ -1,4 +1,4 @@
-#Tue Jul 02 15:35:26 CEST 2019
+#Tue Jul 02 19:05:52 CEST 2019
 base.0=/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

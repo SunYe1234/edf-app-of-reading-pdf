@@ -2,7 +2,9 @@ package cn.xiaolong.pdfiumpdfviewer;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements HttpProgressOnNex
     private Drawable drawable;
 
     private List<String> allPdfName;
-    private String parentDoc="/storage/emulated/0/Download/";
+    private String intParentDoc="/storage/emulated/0/Download/";
+    private String extParentDoc;
 
 
     @Override
@@ -60,12 +63,14 @@ public class MainActivity extends AppCompatActivity implements HttpProgressOnNex
         cpbLoad = (CircleProgressBar) findViewById(R.id.cpbLoad);
         vGuide = findViewById(R.id.vGuide);
         vGuide.setVisibility(View.GONE);
-        allPdfName=getFilesAllName(parentDoc);
+        extParentDoc=getExternalStoragePath()+"/PDFs/";
+        allPdfName=getFilesAllName(extParentDoc);
         allPdfFile=new ArrayList<File>();
         initcpbConfig();
 
         //downLoadPdfFile = new File(this.getCacheDir(), "test" + ".pdf");
-        downLoadPdfFile = new File("/storage/emulated/0/Download/china.pdf");
+        //downLoadPdfFile = new File("/storage/emulated/0/Download/china.pdf");
+        downLoadPdfFile = new File(extParentDoc+"china.pdf");
 
         for (int i=0;i<allPdfName.size();i++)
         {
@@ -78,6 +83,42 @@ public class MainActivity extends AppCompatActivity implements HttpProgressOnNex
         else {
             DownLoadManager.getDownLoadManager().startDown(getDownLoadInfo());
         }
+    }
+
+    public String getExternalStoragePath() {
+
+        String internalPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        String[] paths = internalPath.split("/");
+        String parentPath = "/";
+        for (String s : paths) {
+            if (s.trim().length() > 0) {
+                parentPath = parentPath.concat(s);
+                break;
+            }
+        }
+        File parent = new File(parentPath);
+        if (parent.exists()) {
+            File[] files = parent.listFiles();
+            for (File file : files) {
+                String filePath = file.getAbsolutePath();
+                Log.d(TAG, filePath);
+                if (filePath.equals(internalPath)) {
+                    continue;
+                } else if (filePath.toLowerCase().contains("sdcard")) {
+                    return filePath;
+                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    try {
+                        if (Environment.isExternalStorageRemovable(file)) {
+                            return filePath;
+                        }
+                    } catch (RuntimeException e) {
+                        Log.e(TAG, "RuntimeException: " + e);
+                    }
+                }
+            }
+
+        }
+        return null;
     }
 
 //    private void setButtons()
