@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_96a38f7c453643e1e10f0de822d52c6a552af59b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.2_1c15d7287d222e5c4dcc30e37b164ce905aaaa7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/okio-1.8.0_cd4439f6309face8bb9b1eef649e18ff8055ddf6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_11b384c9f9453a37bbbac72835c6130a4e392f1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_aa1fdd67feee8b11e6fb18204fdd8bdf1bf6518b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.1.0_2ae3331486f55b3b3d45d7003a2d425f647423f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_02d979b20dc28db5243f775379ecefd569acc431.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/gson-2.7_adb35843a250da7ad0c01ef3e46d3a750421adde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.github.barteksc/pdfium-android/1.5.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="97a90b867543905c0717d04f6a60532c9405aa33">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.github.barteksc-pdfium-android-1.5.0_a449bf02b698665a31908f0b290e0c21cce1e36e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_e4031eb1830a351f61416dbf9f9b55714b2d8de7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_b15cee4eb43303af968b617cb1496423472b1ecd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_28273e810044681c79133f4e07e098c06dc4c900.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_6979d553a67b6da38cf6044e2786e1e5d87db2b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_57012548072e0ee8674630048464672b58d7a3a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_187edea91a6d77b515fccda5c6e0f77d31cff15d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.1.0_5fcc551899d432aa308418974846e5650739c06e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_f330608e3f3bb4f8af6cd006b48f60ee13ed5e6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_b59252bd3e64b8f0e748499d4179eabfed39396f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.github.chrisbanes.photoview/library/1.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="98b5309c8d368a7c83ca5f90e0c905044c195edd">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/com.github.chrisbanes.photoview-library-1.2.4_e288d27f910aec8139c2638fb22e20385e64e85f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.5/ece7b5d0870e66d8226dab6dcf47a2b12afff061/rxjava-1.1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ece7b5d0870e66d8226dab6dcf47a2b12afff061">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/rxjava-1.1.5_df9f580f4390928daeaae23b0d8e9adf11cff49e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_416a14c58375810d86544a5f14e0f6b2e5028ee9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yezi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_660884fd64ff501bac35462ee2770a12db14dc52.jar" />
+    </item>
+
+</items>
