@@ -1,0 +1,1 @@
+the android application running on the SAMSUNG GALAXY Tab A6 which is aimed to open the PDF documents stored locally on the USB, and also permitted to modify the documents and save the copies of several users during their session (before the user account is deleted). 
