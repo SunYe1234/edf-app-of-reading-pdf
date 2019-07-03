@@ -63,12 +63,10 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
 		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:18:27-74
-activity#cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdf
-ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:22:9-24:20
-	android:label
-		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:22:50-74
+activity#cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdfActivity
+ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:21:9-23:20
 	android:name
-		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:22:19-49
+		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:21:19-58
 uses-sdk
 INJECTED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78

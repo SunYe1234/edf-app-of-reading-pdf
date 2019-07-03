@@ -30,9 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdf"
-            android:label="show pdf" >
+        <activity android:name="cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdfActivity" >
         </activity>
     </application>
 
