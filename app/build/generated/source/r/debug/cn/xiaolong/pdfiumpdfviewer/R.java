@@ -2324,7 +2324,6 @@ containing a value of this type.
         public static final int basic=0x7f0b000f;
         public static final int beginning=0x7f0b0022;
         public static final int bottom=0x7f0b002a;
-        public static final int button=0x7f0b005f;
         public static final int buttonPanel=0x7f0b0036;
         public static final int cancel_action=0x7f0b0067;
         public static final int chains=0x7f0b0010;
@@ -2405,6 +2404,7 @@ containing a value of this type.
         public static final int submenuarrow=0x7f0b0049;
         public static final int submit_area=0x7f0b005a;
         public static final int tabMode=0x7f0b0014;
+        public static final int table=0x7f0b005f;
         public static final int text=0x7f0b0078;
         public static final int text2=0x7f0b0076;
         public static final int textSpacerNoButtons=0x7f0b003d;

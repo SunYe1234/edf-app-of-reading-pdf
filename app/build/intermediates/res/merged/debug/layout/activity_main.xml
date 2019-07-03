@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <!--<cn.xiaolong.pdfiumpdfviewer.pdf.PhotoViewPager-->
         <!--android:id="@+id/viewpager"-->
@@ -36,23 +37,11 @@
         <!--android:background="@color/main_blue_color"-->
         <!--android:gravity="center"-->
         <!--android:textColor="@color/main_black_color"-->
-        <!--android:textSize="23px"-->
-        <!--android:visibility="gone" />--><![CDATA[
-
-
-    />
-
-
-
-
-
-
-
-
-    ]]><!--<Button-->
-        <!--android:id="@+id/photoGraphBtn2"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_width="match_parent"-->
+        <!--&lt;!&ndash;android:textSize="23px"&ndash;&gt;-->
+        <!--android:visibility="gone" />!&#45;&#45;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/photoGraphBtn2"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
         <!--android:background="@mipmap/icon"-->
         <!--android:drawablePadding="50dip"-->
         <!--android:gravity="center_vertical"-->
@@ -134,20 +123,27 @@
         <!--android:layout_marginStart="55dp"-->
         <!--android:layout_alignParentTop="true" />-->
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="60dip"
-        android:layout_height="60dip"
-        android:background="@android:color/transparent"
-        android:drawableTop="@drawable/ic_unfolded"
-        android:gravity="center"
-        android:text="pdf"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="63dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="125dp" />
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+    </TableLayout>
+    <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="60dip"-->
+        <!--android:layout_height="60dip"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:drawableTop="@drawable/ic_unfolded"-->
+        <!--android:gravity="center"-->
+        <!--android:text="pdf"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginLeft="63dp"-->
+        <!--android:layout_marginStart="63dp"-->
+        <!--android:layout_marginTop="125dp" />-->
 
 
-</RelativeLayout>
+</LinearLayout>

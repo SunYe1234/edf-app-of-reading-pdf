@@ -50,7 +50,8 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
 
     private List<String> allPdfName;
     private String intParentDoc="/storage/emulated/0/Download/";
-    private String extParentDoc;
+    private String extParentDoc;    //the common SD card absolute path for SAMSUNG is /storage/0403-0201/
+    private String selectedPdf;
 
 
     @Override
@@ -67,13 +68,14 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
         vGuide = findViewById(R.id.vGuide);
         vGuide.setVisibility(View.GONE);
         extParentDoc=getExternalStoragePath()+"/PDFs/";
+        selectedPdf=getIntent().getStringExtra("pdf name");
         allPdfName=getFilesAllName(extParentDoc);
         allPdfFile=new ArrayList<File>();
         initcpbConfig();
 
         //downLoadPdfFile = new File(this.getCacheDir(), "test" + ".pdf");
         //downLoadPdfFile = new File("/storage/emulated/0/Download/china.pdf");
-        downLoadPdfFile = new File(extParentDoc+"china.pdf");
+        downLoadPdfFile = new File(extParentDoc+selectedPdf);
 
         for (int i=0;i<allPdfName.size();i++)
         {
