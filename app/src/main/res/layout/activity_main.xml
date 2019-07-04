@@ -3,6 +3,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     >
 
     <!--<cn.xiaolong.pdfiumpdfviewer.pdf.PhotoViewPager-->
@@ -122,14 +123,26 @@
         <!--android:layout_marginLeft="55dp"-->
         <!--android:layout_marginStart="55dp"-->
         <!--android:layout_alignParentTop="true" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            >
+        </TableLayout>
+    </RelativeLayout>
 
-    <TableLayout
-        android:id="@+id/table"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent">
 
-    </TableLayout>
+    </ScrollView>
     <!--<Button-->
         <!--android:id="@+id/button"-->
         <!--android:layout_width="60dip"-->

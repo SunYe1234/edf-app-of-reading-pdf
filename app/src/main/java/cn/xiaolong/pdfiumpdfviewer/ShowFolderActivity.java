@@ -90,7 +90,7 @@ public class ShowFolderActivity extends AppCompatActivity {
      */
     public void startShowFolderActivity(String nextPath)
     {
-        Intent intent=new Intent(this,ShowSelectedPdfActivity.class);
+        Intent intent=new Intent(this,ShowFolderActivity.class);
         intent.putExtra("path", nextPath);
         startActivity(intent);
 
@@ -104,10 +104,12 @@ public class ShowFolderActivity extends AppCompatActivity {
      */
     private boolean isFolder(String folderName)
     {
-        String[] type=folderName.split("\\.");
-        if (type.length>1)
-            return false;
-        return true;
+        File file=new File(folderName);
+        if (file.isDirectory())
+                return true;
+        else
+                return false;
+
     }
 
     /**
@@ -138,13 +140,17 @@ public class ShowFolderActivity extends AppCompatActivity {
             Button codeBtn = new Button( this );
             codeBtn.setText(btnContent);
             codeBtn.setBackgroundColor(Color.TRANSPARENT);
-            Drawable icon=getResources().getDrawable(R.drawable.ic_unfolded);
+            Drawable icon;
+            if (isFolder(currentPath+btnContent))
+                 icon=getResources().getDrawable(R.drawable.ic_unfolded);
+            else
+                 icon=getResources().getDrawable(R.drawable.ic_pack);
             icon.setBounds(0, 0, icon.getIntrinsicWidth()*10, icon.getIntrinsicHeight()*10);
             codeBtn.setCompoundDrawables(codeBtn.getCompoundDrawables()[0],icon,codeBtn.getCompoundDrawables()[2],codeBtn.getCompoundDrawables()[0]);
             codeBtn.setOnClickListener( new View.OnClickListener( ) {
                 @Override
                 public void onClick(View v) {
-                    if (isFolder(btnContent))
+                    if (isFolder(currentPath+btnContent))
                         startShowFolderActivity(currentPath+btnContent+"/");
                     else
                         startShowPdfActivity(currentPath+btnContent);

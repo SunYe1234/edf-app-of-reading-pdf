@@ -148,8 +148,11 @@ public class MainActivity extends AppCompatActivity {
                 Button codeBtn = new Button( this );
                 codeBtn.setText(btnContent);
                 codeBtn.setBackgroundColor(Color.TRANSPARENT);
-                Drawable icon=getResources().getDrawable(R.drawable.ic_unfolded);
-                icon.setBounds(0, 0, icon.getIntrinsicWidth()*10, icon.getIntrinsicHeight()*10);
+                 Drawable icon;
+                if (isFolder(filesPath+btnContent))
+                    icon=getResources().getDrawable(R.drawable.ic_unfolded);
+                else
+                    icon=getResources().getDrawable(R.drawable.ic_pack);                icon.setBounds(0, 0, icon.getIntrinsicWidth()*10, icon.getIntrinsicHeight()*10);
                 codeBtn.setCompoundDrawables(codeBtn.getCompoundDrawables()[0],icon,codeBtn.getCompoundDrawables()[2],codeBtn.getCompoundDrawables()[0]);
                 codeBtn.setOnClickListener( new View.OnClickListener( ) {
                 @Override
@@ -169,6 +172,12 @@ public class MainActivity extends AppCompatActivity {
 //            }
             //新建的TableRow添加到TableLayout
 
+        }
+        if (tableRow != null) {
+            ViewGroup parentViewGroup = (ViewGroup) tableRow.getParent();
+            if (parentViewGroup != null ) {
+                parentViewGroup.removeView(tableRow);
+            }
         }
         mButnsLayout.addView(tableRow);
 
