@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         init();
     }
@@ -65,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         //get the number of pdfs under filesPath
         //numOfFile=FileInfoUtils.getFileSize(file);
         //get the list of pdf names
+        File flist[] = file.listFiles();
+
         namesOfFiles=FileInfoUtils.getFilesName(file);
         numOfFile=namesOfFiles.size();
 
@@ -154,11 +158,11 @@ public class MainActivity extends AppCompatActivity {
                  Drawable icon;
                 //use different images for directory and pdf
                 if (isFolder(filesPath+btnContent))
-                    icon=getResources().getDrawable(R.drawable.ic_unfolded);
+                    icon=getResources().getDrawable(R.drawable.folder);
                 else
-                    icon=getResources().getDrawable(R.drawable.ic_pack);
+                    icon=getResources().getDrawable(R.drawable.pdf);
                 //set bound of icons, otherwise it won't be displayed
-                icon.setBounds(0, 0, icon.getIntrinsicWidth()*10, icon.getIntrinsicHeight()*10);
+                icon.setBounds(0, 0, icon.getIntrinsicWidth(), icon.getIntrinsicHeight());
                 codeBtn.setCompoundDrawables(codeBtn.getCompoundDrawables()[0],icon,codeBtn.getCompoundDrawables()[2],codeBtn.getCompoundDrawables()[0]);
                 codeBtn.setOnClickListener( new View.OnClickListener( ) {
                 @Override

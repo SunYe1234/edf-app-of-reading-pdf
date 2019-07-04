@@ -4,6 +4,10 @@
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/book.png",
+        "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/mipmap-xxxhdpi/book.png"
+    },
+    {
         "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }

@@ -2277,23 +2277,25 @@ containing a value of this type.
         public static final int abc_vector_test=0x7f020052;
         public static final int corner6_gray=0x7f020053;
         public static final int corner_gray=0x7f020054;
-        public static final int ic_pack=0x7f020055;
-        public static final int ic_unfolded=0x7f020056;
-        public static final int notification_action_background=0x7f020057;
-        public static final int notification_bg=0x7f020058;
-        public static final int notification_bg_low=0x7f020059;
-        public static final int notification_bg_low_normal=0x7f02005a;
-        public static final int notification_bg_low_pressed=0x7f02005b;
-        public static final int notification_bg_normal=0x7f02005c;
-        public static final int notification_bg_normal_pressed=0x7f02005d;
-        public static final int notification_icon_background=0x7f02005e;
-        public static final int notification_template_icon_bg=0x7f020064;
-        public static final int notification_template_icon_low_bg=0x7f020065;
-        public static final int notification_tile_bg=0x7f02005f;
-        public static final int notify_panel_notification_icon_bg=0x7f020060;
-        public static final int select_pdf_back=0x7f020061;
-        public static final int select_viewer_state=0x7f020062;
-        public static final int stroke_blue=0x7f020063;
+        public static final int folder=0x7f020055;
+        public static final int ic_pack=0x7f020056;
+        public static final int ic_unfolded=0x7f020057;
+        public static final int notification_action_background=0x7f020058;
+        public static final int notification_bg=0x7f020059;
+        public static final int notification_bg_low=0x7f02005a;
+        public static final int notification_bg_low_normal=0x7f02005b;
+        public static final int notification_bg_low_pressed=0x7f02005c;
+        public static final int notification_bg_normal=0x7f02005d;
+        public static final int notification_bg_normal_pressed=0x7f02005e;
+        public static final int notification_icon_background=0x7f02005f;
+        public static final int notification_template_icon_bg=0x7f020066;
+        public static final int notification_template_icon_low_bg=0x7f020067;
+        public static final int notification_tile_bg=0x7f020060;
+        public static final int notify_panel_notification_icon_bg=0x7f020061;
+        public static final int pdf=0x7f020062;
+        public static final int select_pdf_back=0x7f020063;
+        public static final int select_viewer_state=0x7f020064;
+        public static final int stroke_blue=0x7f020065;
     }
     public static final class id {
         public static final int action0=0x7f0b0066;
@@ -2484,9 +2486,9 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f040031;
     }
     public static final class mipmap {
-        public static final int ic_launcher=0x7f030000;
-        public static final int ic_launcher_round=0x7f030001;
-        public static final int icon=0x7f030002;
+        public static final int book=0x7f030000;
+        public static final int ic_launcher=0x7f030001;
+        public static final int ic_launcher_round=0x7f030002;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f060000;

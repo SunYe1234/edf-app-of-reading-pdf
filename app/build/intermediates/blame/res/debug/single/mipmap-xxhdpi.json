@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/book.png",
+        "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/mipmap-xxhdpi/book.png"
+    },
+    {
         "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },

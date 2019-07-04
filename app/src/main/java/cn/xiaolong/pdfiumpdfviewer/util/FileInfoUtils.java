@@ -69,14 +69,14 @@ public class FileInfoUtils {
     public static long getFileSize(File f) {
         long size = 0;
         File flist[] = f.listFiles();
-        for (int i = 0; i < flist.length; i++)
-        {
-            if (flist[i].isDirectory())
-                size = size + getFileSize(flist[i]);
-            else
-                size = size + 1;
-        }
-        return size;
+//        for (int i = 0; i < flist.length; i++)
+//        {
+//            if (flist[i].isDirectory())
+//                size = size + getFileSize(flist[i]);
+//            else
+//                size = size + 1;
+//        }
+        return flist.length;
     }
 
     //get all of the document names under a file path
