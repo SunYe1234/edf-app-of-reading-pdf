@@ -49,8 +49,8 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
     private Drawable drawable;
 
     private List<String> allPdfName;
-    private String intParentDoc="/storage/emulated/0/Download/";
-    private String extParentDoc;    //the common SD card absolute path for SAMSUNG is /storage/0403-0201/
+//    private String intParentDoc="/storage/emulated/0/Download/";
+//    private String extParentDoc;    //the common SD card absolute path for SAMSUNG is /storage/0403-0201/
     private String selectedPdf;
 
 
@@ -58,7 +58,6 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_pdf);
-        // setButtons();
         init();
         setListener();
     }
@@ -67,21 +66,13 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
         cpbLoad = (CircleProgressBar) findViewById(R.id.cpbLoad);
         vGuide = findViewById(R.id.vGuide);
         vGuide.setVisibility(View.GONE);
-        extParentDoc=getExternalStoragePath()+"/PDFs/";
+//        extParentDoc=getExternalStoragePath()+"/PDFs/";
         selectedPdf=getIntent().getStringExtra("pdf name");
         //allPdfName=getFilesAllName(extParentDoc);
         //allPdfFile=new ArrayList<File>();
         initcpbConfig();
 
-        //downLoadPdfFile = new File(this.getCacheDir(), "test" + ".pdf");
-        //downLoadPdfFile = new File("/storage/emulated/0/Download/china.pdf");
-        //downLoadPdfFile = new File(extParentDoc+selectedPdf);
         downLoadPdfFile=new File(getIntent().getStringExtra("pdf name"));
-
-//        for (int i=0;i<allPdfName.size();i++)
-//        {
-//            allPdfFile.add(new File(allPdfName.get(i)));
-//        }
         if (downLoadPdfFile.exists() )
         {if( FileUtils.getFileSize(downLoadPdfFile) > 0)
             loadFinish();
@@ -127,42 +118,7 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
         return null;
     }
 
-//    private void setButtons()
-//    {
-//        DisplayMetrics dm = new DisplayMetrics();
-//        getWindowManager().getDefaultDisplay().getMetrics(dm);
-//        int width = dm.widthPixels;
-//        int height = dm.heightPixels;
-//
-//        buttons=new ArrayList<Button>();
-//        Button button1=(Button) findViewById(R.id.photoGraphBtn1);
-//        buttons.add(button1);
-//        Button button2=(Button) findViewById(R.id.photoGraphBtn1);
-//        buttons.add(button2);
-//
-//        RelativeLayout layout = new RelativeLayout(this);
-//
-//        //这里创建16个按钮，每行放置4个按钮
-//
-//        Button Btn[] = new Button[16];
-//        int j = -1;
-//        for  (int i=0; i<=15; i++) {
-//            Btn[i]=new Button(this);
-//            Btn[i].setId(2000+i);
-//            Btn[i].setText("pdf"+i);
-//            RelativeLayout.LayoutParams btParams = new RelativeLayout.LayoutParams ((width-50)/4,40);  //设置按钮的宽度和高度
-//            if (i%4 == 0) {
-//                j++;
-//            }
-//            btParams.leftMargin = 10+ ((width-50)/4+10)*(i%4);   //横坐标定位
-//            btParams.topMargin = 20 + 55*j;   //纵坐标定位
-//            layout.addView(Btn[i],btParams);   //将按钮放入layout组件
-//        }
-//
-//
-//        drawable=getResources().getDrawable(R.mipmap.ic_launcher);
-//        drawable.setBounds(0,0,drawable.getMinimumWidth(),drawable.getMinimumHeight());
-//    }
+
 
     private void initcpbConfig() {
         cpbLoad.setValue(0);
@@ -250,7 +206,7 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
         File file=new File(path);
         File[] files=file.listFiles();
         if (files == null){
-            Log.e("error","空目录");return null;}
+            Log.e("error","empty directory");return null;}
         List<String> s = new ArrayList<>();
         for(int i =0;i<files.length;i++){
             String[] type=files[i].getName().split("\\.");
@@ -297,17 +253,17 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
     @Override
     public void onLoadError(Throwable e) {
         e.printStackTrace();
-        Toast.makeText(this, "下载发生异常错误。", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "error in downloading。", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onLoadPause() {
-        Toast.makeText(this, "暂停下载", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "pause on downloading", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onLoadStop() {
-        Toast.makeText(this, "停止下载", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "stop the download", Toast.LENGTH_LONG).show();
     }
 
 }

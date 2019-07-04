@@ -32,8 +32,6 @@
         </activity>
         <activity android:name="cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdfActivity" >
         </activity>
-        <activity android:name="cn.xiaolong.pdfiumpdfviewer.ShowFolderActivity" >
-        </activity>
     </application>
 
 </manifest>

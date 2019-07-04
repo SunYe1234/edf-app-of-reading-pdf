@@ -21,9 +21,6 @@
         <activity android:name=".ShowSelectedPdfActivity">
 
         </activity>
-        <activity android:name=".ShowFolderActivity">
-
-        </activity>
     </application>
 
 </manifest>

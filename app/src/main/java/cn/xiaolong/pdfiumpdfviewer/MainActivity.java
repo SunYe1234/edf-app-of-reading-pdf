@@ -26,22 +26,21 @@ import cn.xiaolong.pdfiumpdfviewer.util.FileInfoUtils;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-/**
- *
- */
+
 public class MainActivity extends AppCompatActivity {
     private final int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
     private final int FP = ViewGroup.LayoutParams.FILL_PARENT;
 
 
     private Button button;
-    private TableLayout mButnsLayout;
-    private ArrayList<String> mButnsNames;
+    protected TableLayout mButnsLayout;
+    protected ArrayList<String> mButnsNames;
     private View.OnClickListener onClickListener;
 
     private long numOfFile;
     private ArrayList<String> namesOfFiles;
     private String filesPath="/storage/0403-0201/PDFs/";
+    //private static boolean firstTime=true;
 
 
     public void onCreate(@Nullable Bundle savedInstanceState)
@@ -55,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void init()
     {
+        //if it's not the first time to start MainActivity, than the filesPath is not the initial filesPath,
+        //set it to the value received
         if (getIntent().getStringExtra("path")!=null) {
             Log.d("****received path value",filesPath);
             filesPath = getIntent().getStringExtra("path");
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * add buttons dynamically according to the number of files under the attribute "filesPath"
      */
-    private void setButtons()
+    protected void setButtons()
     {
 
         findAllView( );
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * start ShowSelectedPdfActivity to show pdf
      */
-    public void startShowPdfActivity(String pdfName)
+    protected void startShowPdfActivity(String pdfName)
     {
         Intent intent=new Intent(this,ShowSelectedPdfActivity.class);
         intent.putExtra("pdf name", pdfName);
@@ -99,9 +100,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * start ShowSelectedFolderActivity to show folders
      */
-    public void startShowFolderActivity(String nextPath)
+    protected void startShowFolderActivity(String nextPath)
     {
-        Intent intent=new Intent(this,ShowFolderActivity.class);
+        Intent intent=new Intent(this,MainActivity.class);
         intent.putExtra("path", nextPath);
 
         startActivity(intent);
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * get the LinearLayout where we put all of the buttons
      */
-    private void findAllView()
+    protected void findAllView()
     {
         mButnsLayout=(TableLayout)findViewById(R.id.table);
         mButnsLayout.setStretchAllColumns(true);
@@ -122,21 +123,22 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * if folderName is a folder, return true, otherwise return false
-     * @param folderName
+     * @param folderName    folderName=filesPath+name of the folder
      * @return
      */
-    private boolean isFolder(String folderName)
+    protected boolean isFolder(String folderName)
     {
-        String[] type=folderName.split("\\.");
-        if (type.length>1)
+        File file=new File(folderName);
+        if (file.isDirectory())
+            return true;
+        else
             return false;
-        return true;
     }
     /**
      * create a list of buttons which represent all of the pdfs under filesPath
      * @param btnContentList    the list of buttons by which we can read all of the pdfs under filesPath
      */
-    private void generateBtnList( ArrayList<String> btnContentList ){
+    protected void generateBtnList( ArrayList<String> btnContentList ){
         int indexInRow=0;
         int index = 0;
         TableRow tableRow=null;
@@ -145,19 +147,23 @@ public class MainActivity extends AppCompatActivity {
                 //if it's a new row, create a TableRow
                 if (indexInRow==0)  tableRow=new TableRow(this);
                 //create the button corresponding with name btnContent
+                // and set its text and background color which will be transparent
                 Button codeBtn = new Button( this );
                 codeBtn.setText(btnContent);
                 codeBtn.setBackgroundColor(Color.TRANSPARENT);
                  Drawable icon;
+                //use different images for directory and pdf
                 if (isFolder(filesPath+btnContent))
                     icon=getResources().getDrawable(R.drawable.ic_unfolded);
                 else
-                    icon=getResources().getDrawable(R.drawable.ic_pack);                icon.setBounds(0, 0, icon.getIntrinsicWidth()*10, icon.getIntrinsicHeight()*10);
+                    icon=getResources().getDrawable(R.drawable.ic_pack);
+                //set bound of icons, otherwise it won't be displayed
+                icon.setBounds(0, 0, icon.getIntrinsicWidth()*10, icon.getIntrinsicHeight()*10);
                 codeBtn.setCompoundDrawables(codeBtn.getCompoundDrawables()[0],icon,codeBtn.getCompoundDrawables()[2],codeBtn.getCompoundDrawables()[0]);
                 codeBtn.setOnClickListener( new View.OnClickListener( ) {
                 @Override
                 public void onClick(View v) {
-                    if (isFolder(btnContent))
+                    if (isFolder(filesPath+btnContent))
                         startShowFolderActivity(filesPath+btnContent+"/");
                     else
                         startShowPdfActivity(filesPath+btnContent);                }
@@ -168,11 +174,9 @@ public class MainActivity extends AppCompatActivity {
                 //if it's the 3rd button of one row, add this row to the table
                 if (indexInRow==2)  mButnsLayout.addView(tableRow);
                 indexInRow=(indexInRow+1)%3;
-
-//            }
-            //新建的TableRow添加到TableLayout
-
         }
+        //add the row which has less than 3 buttons to the table
+        //before adding it, remove its parent view if it already has one
         if (tableRow != null) {
             ViewGroup parentViewGroup = (ViewGroup) tableRow.getParent();
             if (parentViewGroup != null ) {
@@ -184,22 +188,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
-     *
-     */
-    private void filtrePDF()
-    {
-        ArrayList<String> nameOfPdfs=new ArrayList<String>();
-        for (int i=0;i<namesOfFiles.size();i++)
-        {
-            String type=namesOfFiles.get(i).split("\\.")[1];
-            if (!type.equals("pdf")) {
-                continue;
-            }
-            nameOfPdfs.add(namesOfFiles.get(i).split("\\.")[0]);
-        }
-        namesOfFiles=nameOfPdfs;
-    }
+//    /**
+//     *
+//     */
+//    private void filtrePDF()
+//    {
+//        ArrayList<String> nameOfPdfs=new ArrayList<String>();
+//        for (int i=0;i<namesOfFiles.size();i++)
+//        {
+//            String type=namesOfFiles.get(i).split("\\.")[1];
+//            if (!type.equals("pdf")) {
+//                continue;
+//            }
+//            nameOfPdfs.add(namesOfFiles.get(i).split("\\.")[0]);
+//        }
+//        namesOfFiles=nameOfPdfs;
+//    }
 
 
 

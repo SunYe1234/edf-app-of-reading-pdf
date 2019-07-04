@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:3:5-42
 		INJECTED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/Andr
 	android:name
 		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:7:5-27:19
+ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:7:5-24:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
@@ -67,10 +67,6 @@ activity#cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdfActivity
 ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:21:9-23:20
 	android:name
 		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:21:19-58
-activity#cn.xiaolong.pdfiumpdfviewer.ShowFolderActivity
-ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:24:9-26:20
-	android:name
-		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:24:19-53
 uses-sdk
 INJECTED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78
