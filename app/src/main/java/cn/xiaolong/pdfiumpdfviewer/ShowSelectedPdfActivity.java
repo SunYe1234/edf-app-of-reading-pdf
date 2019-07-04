@@ -69,18 +69,19 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
         vGuide.setVisibility(View.GONE);
         extParentDoc=getExternalStoragePath()+"/PDFs/";
         selectedPdf=getIntent().getStringExtra("pdf name");
-        allPdfName=getFilesAllName(extParentDoc);
-        allPdfFile=new ArrayList<File>();
+        //allPdfName=getFilesAllName(extParentDoc);
+        //allPdfFile=new ArrayList<File>();
         initcpbConfig();
 
         //downLoadPdfFile = new File(this.getCacheDir(), "test" + ".pdf");
         //downLoadPdfFile = new File("/storage/emulated/0/Download/china.pdf");
-        downLoadPdfFile = new File(extParentDoc+selectedPdf);
+        //downLoadPdfFile = new File(extParentDoc+selectedPdf);
+        downLoadPdfFile=new File(getIntent().getStringExtra("pdf name"));
 
-        for (int i=0;i<allPdfName.size();i++)
-        {
-            allPdfFile.add(new File(allPdfName.get(i)));
-        }
+//        for (int i=0;i<allPdfName.size();i++)
+//        {
+//            allPdfFile.add(new File(allPdfName.get(i)));
+//        }
         if (downLoadPdfFile.exists() )
         {if( FileUtils.getFileSize(downLoadPdfFile) > 0)
             loadFinish();
