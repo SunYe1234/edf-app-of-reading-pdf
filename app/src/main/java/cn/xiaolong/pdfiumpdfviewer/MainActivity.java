@@ -9,9 +9,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -155,6 +158,20 @@ public class MainActivity extends AppCompatActivity {
                 Button codeBtn = new Button( this );
                 codeBtn.setText(btnContent);
                 codeBtn.setBackgroundColor(Color.TRANSPARENT);
+                //set the animation of a button when it's clicked
+                codeBtn.setOnTouchListener(new View.OnTouchListener() {
+                                               @Override
+                                               public boolean onTouch(View v, MotionEvent event) {
+                                                   switch (event.getAction()) {
+                                                       case MotionEvent.ACTION_DOWN:
+                                                           Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.nomal_to_large);
+                                                           v.startAnimation(animation);
+                                                           break;
+                                                   }
+                                                   return false;
+                                               }
+
+                                           });
                  Drawable icon;
                 //use different images for directory and pdf
                 if (isFolder(filesPath+btnContent))

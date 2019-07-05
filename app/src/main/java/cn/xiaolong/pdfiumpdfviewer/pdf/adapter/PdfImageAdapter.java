@@ -52,7 +52,7 @@ public class PdfImageAdapter extends PagerAdapter {
                 .subscribe(new Subscriber<Bitmap>() {
                     @Override
                     public void onStart() {
-                        ivLargeImage.setImageResource(R.mipmap.ic_launcher);
+                        //ivLargeImage.setImageResource(R.mipmap.book);
                     }
 
                     @Override

@@ -42,7 +42,7 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/yezi/Downloads/PD
 	android:supportsRtl
 		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:12:9-35
 	android:roundIcon
-		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:11:9-41
 	android:allowBackup
 		ADDED from /Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
