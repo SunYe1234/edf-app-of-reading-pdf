@@ -36,7 +36,7 @@ import cn.xiaolong.pdfiumpdfviewer.pdf.utils.FileUtils;
 
 public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpProgressOnNextListener<DownLoadInfo> {
 
-    private static final String TAG="MainActivity";
+    private static final String TAG="showDireActivity";
     private CircleProgressBar cpbLoad;
     private PDFManager mPDFManager;
     private ViewPager mViewpager;
@@ -44,6 +44,7 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
     private View vGuide;
     private File downLoadPdfFile;
     private List<File> allPdfFile;
+    private String userName;
 
 
     private List<Button> buttons;
@@ -75,6 +76,7 @@ public class ShowSelectedPdfActivity extends AppCompatActivity implements HttpPr
         initcpbConfig();
 
         downLoadPdfFile=new File(getIntent().getStringExtra("pdf name"));
+        userName=getIntent().getStringExtra("userName");
         if (downLoadPdfFile.exists() )
         {if( FileUtils.getFileSize(downLoadPdfFile) > 0)
             loadFinish();

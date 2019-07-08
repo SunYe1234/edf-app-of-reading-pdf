@@ -36,6 +36,9 @@
             android:name="cn.xiaolong.pdfiumpdfviewer.ShowSelectedPdfActivity"
             android:label="PDF reader" >
         </activity>
+        <activity android:name="cn.xiaolong.pdfiumpdfviewer.showDireActivity" />
+        <activity android:name="cn.xiaolong.pdfiumpdfviewer.loginSignup.DashboardActivity" />
+        <activity android:name="cn.xiaolong.pdfiumpdfviewer.loginSignup.RegisterActivity" />
     </application>
 
 </manifest>

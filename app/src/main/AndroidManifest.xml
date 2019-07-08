@@ -23,6 +23,9 @@
             android:label="PDF reader">
 
         </activity>
+        <activity android:name=".showDireActivity"/>
+        <activity android:name=".loginSignup.DashboardActivity"/>
+        <activity android:name=".loginSignup.RegisterActivity"/>
     </application>
 
 </manifest>

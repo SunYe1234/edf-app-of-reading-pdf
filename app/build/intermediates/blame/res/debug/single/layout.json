@@ -20,6 +20,10 @@
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/select_dialog_multichoice_material.xml"
     },
     {
+        "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/activity_register.xml",
+        "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/layout/activity_register.xml"
+    },
+    {
         "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/notification_action.xml"
     },
@@ -32,6 +36,10 @@
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/notification_action_tombstone.xml"
     },
     {
+        "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/show_dire.xml",
+        "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/layout/show_dire.xml"
+    },
+    {
         "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/notification_template_part_time.xml"
     },
@@ -42,6 +50,10 @@
     {
         "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml",
         "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/activity_dashboard.xml",
+        "source": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/src/main/res/layout/activity_dashboard.xml"
     },
     {
         "merged": "/Users/yezi/Downloads/PDFiumForAndroidDemo-master-2/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",

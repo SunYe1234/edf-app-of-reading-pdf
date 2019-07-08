@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--<item-->
+    <!--android:id="@+id/action_settings01"-->
+    <!--android:icon="@drawable/ic_favorite_black_48dp"-->
+    <!--android:title="@string/action_settings01"-->
+    <!--android:showAsAction="ifRoom"/>-->
+
+    <!--&lt;!&ndash; 在这里添加item&ndash;&gt;-->
+    <!--<item android:id="@+id/action_settings02"-->
+    <!--android:title="@string/action_settings02"&lt;!&ndash; 只能通过属性的方式在res/values/string.xml中添加或修改文字 &ndash;&gt;-->
+    <!--android:showAsAction="ifRoom"/>-->
+</menu>
