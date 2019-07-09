@@ -156,8 +156,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, showDireActivity.class);
 
             // Sending Email to Dashboard Activity using intent.
-            intent.putExtra(userName,UserName );
-
+            intent.putExtra("userName",UserName );
+            intent.setClass(this,showDireActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
 
 

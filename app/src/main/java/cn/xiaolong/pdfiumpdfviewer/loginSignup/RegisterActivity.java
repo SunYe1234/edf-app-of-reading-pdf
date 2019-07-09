@@ -1,6 +1,7 @@
 package cn.xiaolong.pdfiumpdfviewer.loginSignup;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import cn.xiaolong.pdfiumpdfviewer.MainActivity;
 import cn.xiaolong.pdfiumpdfviewer.R;
 //import com.example.shiva.loginsignup.RegisterActivity
 
@@ -19,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     //public static boolean NameHolder;
     EditText Email, Password, Name ;
     Button Register;
-    String NameHolder, EmailHolder, PasswordHolder;
+    String NameHolder, PasswordHolder;
     Boolean EditTextEmptyHolder;
     SQLiteDatabase sqLiteDatabaseObj;
     String SQLiteDataBaseQueryHolder ;
@@ -106,6 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             // Printing toast message after done inserting.
             Toast.makeText(RegisterActivity.this,"User Registered Successfully", Toast.LENGTH_LONG).show();
+            goBackToLoginPage();
 
         }
         // This block will execute if any of the registration EditText is empty.
@@ -118,12 +121,32 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    // delete data in the SQLite database .
+    public  void DeleteDataInSQLiteDatabase(){
+
+
+        // SQLite query to insert data into table.
+        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_Name+" = '"+NameHolder+"';";
+
+        // Executing query.
+        sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
+
+        // Closing SQLite database object.
+        sqLiteDatabaseObj.close();
+
+        // Printing toast message after done inserting.
+        Toast.makeText(RegisterActivity.this,"User deleted Successfully", Toast.LENGTH_LONG).show();
+
+
+
+    }
+
+
     // Empty edittext after done inserting process method.
     public void EmptyEditTextAfterDataInsert(){
 
         Name.getText().clear();
 
-        Email.getText().clear();
 
         Password.getText().clear();
 
@@ -134,10 +157,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Getting value from All EditText and storing into String Variables.
         NameHolder = Name.getText().toString() ;
-        EmailHolder = Email.getText().toString();
         PasswordHolder = Password.getText().toString();
 
-        if(TextUtils.isEmpty(NameHolder) || TextUtils.isEmpty(EmailHolder) || TextUtils.isEmpty(PasswordHolder)){
+        if(TextUtils.isEmpty(NameHolder)  || TextUtils.isEmpty(PasswordHolder)){
 
             EditTextEmptyHolder = false ;
 
@@ -197,6 +219,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         F_Result = "Not_Found" ;
 
+    }
+
+    private void goBackToLoginPage()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }

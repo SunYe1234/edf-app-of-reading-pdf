@@ -1,6 +1,9 @@
 package cn.xiaolong.pdfiumpdfviewer;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -27,6 +30,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import cn.xiaolong.pdfiumpdfviewer.loginSignup.DashboardActivity;
+import cn.xiaolong.pdfiumpdfviewer.loginSignup.RegisterActivity;
+import cn.xiaolong.pdfiumpdfviewer.loginSignup.SQLiteHelper;
 import cn.xiaolong.pdfiumpdfviewer.util.FileInfoUtils;
 
 
@@ -34,6 +39,10 @@ public class showDireActivity extends AppCompatActivity {
     private final int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
     private final int FP = ViewGroup.LayoutParams.FILL_PARENT;
 
+    SQLiteDatabase sqLiteDatabaseObj;
+    String SQLiteDataBaseQueryHolder ;
+    SQLiteHelper sqLiteHelper;
+    Cursor cursor;
 
     private Button button;
     protected TableLayout mButnsLayout;
@@ -74,8 +83,8 @@ public class showDireActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // 填充menu的main.xml文件; 给action bar添加条目
         getMenuInflater().inflate(R.menu.main, menu);
-        menu.add(0, 0, 1, "备注1");// 相当于在res/menu/main.xml文件中，给menu增加一个新的条目item，这个条目会显示title标签的文字（如备注1）
-//        menu.add(0, 1, 2, "备注2");//第二个参数代表唯一的item ID.
+        menu.add(0, 0, 1, "Log Out");// 相当于在res/menu/main.xml文件中，给menu增加一个新的条目item，这个条目会显示title标签的文字（如备注1）
+        menu.add(0, 1, 2, "Delete Account");//第二个参数代表唯一的item ID.
 //        menu.add(0, 2, 3, "备注3");
 //        menu.add(0, 3, 4, "备注4");
 
@@ -84,17 +93,58 @@ public class showDireActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case 0:
-                Intent intent = new Intent(this, DashboardActivity.class);
+                Toast.makeText(showDireActivity.this,"User log out", Toast.LENGTH_LONG).show();
+
+                Intent intent_0 = new Intent(this, MainActivity.class);
 
                 // Sending Email to Dashboard Activity using intent.
-                intent.putExtra("userName",userName );
-                startActivity(intent);
+//                intent_0.putExtra("userName",userName );
+//                intent_0.setClass(this,DashboardActivity.class);
+//                intent_0.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent_0);
+                break;
+            case 1:
+                SQLiteDataBaseBuild();
+               DeleteDataInSQLiteDatabase();
+               goBackToLoginPage();
                 break;
 
             default:
                 break;
         }
         return true;
+    }
+    private void goBackToLoginPage()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    // SQLite database build method.
+    public void SQLiteDataBaseBuild(){
+
+        sqLiteDatabaseObj = openOrCreateDatabase("UserDataBase", Context.MODE_PRIVATE, null);
+
+    }
+
+    // delete data in the SQLite database .
+    public  void DeleteDataInSQLiteDatabase(){
+
+
+        // SQLite query to insert data into table.
+        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_Name+" = '"+userName+"';";
+
+        // Executing query.
+        sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
+
+        // Closing SQLite database object.
+        sqLiteDatabaseObj.close();
+
+        // Printing toast message after done inserting.
+        Toast.makeText(showDireActivity.this,"User deleted Successfully", Toast.LENGTH_LONG).show();
+
+
+
     }
 
     private void init()
